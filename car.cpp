@@ -52,10 +52,9 @@ void Car::update(){
 
 void Car::drawWheel(){
 
-        float dim = this->health/3.0;
         GLUquadricObj* q = gluNewQuadric();
         glPushMatrix();
-        glColor3f((141/255.0)*dim,(117/255.0)*dim,(87/255.0)*dim);
+        glColor3f((141/255.0),(117/255.0),(87/255.0));
         glTranslatef(this->xCoordinate, this->yCoordinate, this->zCoordinate+0.1);
         glRotatef(180, 1,0,0);
         glRotatef(angle,0,0,1);
@@ -63,14 +62,14 @@ void Car::drawWheel(){
         glPopMatrix();
 
         glPushMatrix();
-        glColor3f((141/255.0)*dim,(117/255.0)*dim,(87/255.0)*dim);
+        glColor3f((141/255.0),(117/255.0),(87/255.0));
         glTranslatef(this->xCoordinate, this->yCoordinate, this->zCoordinate+0.1);
         glRotatef(angle,0,0,1);
         gluCylinder(q,0.1,0.1,0.1,15,15);
         glPopMatrix();
 
         glPushMatrix();
-        glColor3f((141/255.0)*dim,(117/255.0)*dim,(87/255.0)*dim);
+        glColor3f((141/255.0),(117/255.0),(87/255.0));
         glTranslatef(this->xCoordinate, this->yCoordinate, this->zCoordinate+0.2);
         glRotatef(180, 1,0,0);
         glRotatef(angle,0,0,1);
